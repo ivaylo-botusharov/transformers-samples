@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "hugging-face-transformers-demo"
+version = "0.1.0"
+description = ""
+authors = ["Ivaylo Botusharov <ivaylo.botusharov@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.11"
+torch = "2.0.1"
+transformers = "4.29.2"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "1.3.0"
+pylint = "2.17.4"
+pycodestyle = "2.10.0"
+black = "23.3.0"
+flake8 = "6.0.0"
+pyright = "1.1.310"
+
+[tool.pylint.format]
+max-line-length = 140
+
+[tool.pyright]
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

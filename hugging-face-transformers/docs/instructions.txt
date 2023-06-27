@@ -1,0 +1,147 @@
+1. Install Python 3.10.11:
+
+You can use: scripts/python-install.sh
+
+or you can download the Python official installer from: and run it on your computer
+
+2. Install poetry
+
+You can install Poetry by running: sudo sh /poetry-install.sh from the scripts folder 
+
+
+3. Create virtual environment (using Poetry)
+Open terminal in Project folder and run:
+
+poetry env use /usr/local/bin/python3.10
+
+
+4. Select Python interpreter for the Project (Workspace)
+
+Reopen project in VS Code
+
+Go to: View - Command pallete (Command + Shift + P) - Python: Select interpreter - Select at workspace level - make sure the Python 3.10.11 (Poetry) interpreter is selected
+
+5. Install packages
+
+In terminal type:
+
+poetry lock
+poetry install
+
+6. Start Project
+
+In Terminal navigate to the Project folder (where also the MakeFile is located) and start the project by typing:
+
+make run
+
+
+-------
+
+
+cd 'Projects/shell-scripts'
+
+sudo sh python-installer-pkg.sh
+
+sudo sh python-poetry-remove.sh
+
+-------
+
+Removed from python-3.11.3-installer-pkg.sh:
+
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
+
+echo 'alias python=/usr/local/bin/python3.11' >> ~/.zshrc
+
+source ~/.zshrc
+
+------
+
+~/.zshrc:
+(/Users/ivaylo.botusharov/.zshrc):
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="/Users/ivaylo.botusharov/.local/bin:$PATH"
+
+export PATH="/usr/local/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+------
+
+~/.bash_profile
+(/Users/ivaylo.botusharov/.bash_profile):
+
+export PATH="$PATH:$HOME/.local/bin"
+
+export PATH="/Users/ivaylo.botusharov/.local/bin:$PATH"
+
+
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+
+------
+
+Poetry:
+
+`export PATH="/Users/ivaylo.botusharov/.local/bin:$PATH"`
+
+`export PATH="$HOME/.local/bin:$PATH"`
+
+To get started you need Poetry's bin directory (/Users/ivaylo.botusharov/.local/bin) in your `PATH`
+environment variable.
+
+Add `export PATH="/Users/ivaylo.botusharov/.local/bin:$PATH"` to your shell configuration file.
+
+Alternatively, you can call Poetry explicitly with `/Users/ivaylo.botusharov/.local/bin/poetry`.
+
+You can test that everything is set up by executing:
+
+`poetry --version`
+
+------
+
+To remove all Python versions from your computer using the terminal, you can follow these steps:
+
+Open the terminal.
+Type sudo rm -rf /Library/Frameworks/Python.framework/Versions/* and press Enter.
+Type sudo rm -rf /Applications/Python* and press Enter.
+Type sudo rm -rf /usr/local/bin/python* and press Enter.
+Type hash -r and press Enter.
+This should remove all Python versions from your computer
+
+
+sudo curl -sSL https://install.python-poetry.org | python3 -
+
+----------
+
+
+sudo curl -sSL 'https://install.python-poetry.org' | python -
+
+
+sudo curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+
+-----------
+
+Python Releases for Mac OS X:
+
+https://www.python.org/ftp/python/3.11.3/python-3.11.3-macos11.pkg
+
+https://www.python.org/ftp/python/3.10.11/python-3.10.11-macos11.pkg
+
+-------------
+
+Navigate to your Python project directory and run the following commands:
+
+poetry install
+poetry lock
+
+poetry env use /usr/local/bin/python3.10
+
+--------------
+
+echo 'export PATH="$HOME/.poetry/bin:$PATH"' >> ~/.zshrc
+
+---------------
