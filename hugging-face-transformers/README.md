@@ -37,14 +37,26 @@ In terminal type:
 ```poetry lock```  
 ```poetry install```   
 
-### 6. Start Project
+### 6. Start main.py
 
 In Terminal navigate to the Project folder (where also the MakeFile is located) and start the project by typing: ```make run```  
 
-The current Hugging Face Transformers pipeline used is: sentiment-analysis, which evaluates the sentiment for entered text.  
+Several Hugging Face Transformers pipelines will be executed sequentially:
 
-You should in the Terminal something like:  
-[{'label': 'POSITIVE', 'score': 0.9998788833618164}]
+* sentiment-analysis
+* named-entity recognition (NER)
+* question answering
+* summarization
+
+### 7. Start transformers_offline.py
+
+Prerequisites:  
+
+* Download the [files](https://drive.google.com/drive/folders/14pT_IRs4HCvfpjfitGE6dpRHjvIz0bZa?usp=sharing) folder from my Google Drive.  
+
+* Move the files folder into ```hugging-face-transformers/src``` folder  
+
+Open Terminal and execute the command: ```make run-offline```
 
 --------------------------
 
