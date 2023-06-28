@@ -14,7 +14,7 @@ Description: This is a basic chatbot console application using Azure OpenAI clie
 
 3. An Azure OpenAI Service resource with the gpt-4¹ model deployed. For more information about model deployment, see the [resource deployment guide](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/create-resource).  
 
-1 - GPT-4 models are currently only available by request. To access these models, existing Azure OpenAI customers can [apply for access by filling out this form](https://aka.ms/oai/get-gpt4)  
+¹ - GPT-4 models are currently only available by request. To access these models, existing Azure OpenAI customers can [apply for access by filling out this form](https://aka.ms/oai/get-gpt4)  
 
 *Reference:*
 
