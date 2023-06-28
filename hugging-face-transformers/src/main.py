@@ -9,8 +9,9 @@ from transformers import (
 def perform_sentiment_analysis_online(text: str) -> Pipeline:
     """Takes text as input and returns the sentiment analysis result."""
     sentiment_classifier: Pipeline = pipeline(
-        "sentiment-analysis",
-        model="distilbert-base-uncased-finetuned-sst-2-english", revision="3d65bad")
+        task="sentiment-analysis",
+        model="distilbert-base-uncased-finetuned-sst-2-english",
+        revision="3d65bad")
     result: Pipeline = sentiment_classifier(text)
     return result
 
@@ -18,7 +19,7 @@ def perform_sentiment_analysis_online(text: str) -> Pipeline:
 def perform_named_entity_recognition_online(text: str) -> Pipeline:
     """Takes text as input and returns the named entity recognition result of the online model."""
     ner_tagger = pipeline(
-        "ner",
+        task="ner",
         model="dbmdz/bert-large-cased-finetuned-conll03-english",
         revision="f2482bf",
         aggregation_strategy="simple")
