@@ -1,4 +1,4 @@
-## Hugging Face Transformers Demos
+## Hugging Face Transformers Samples
 
 Description: This is a Python Demo Project using [Hugging Face Transformers](https://huggingface.co/docs/transformers/index) for Natural language processing (NLP).  
 
@@ -48,7 +48,7 @@ Several Hugging Face Transformers pipelines will be executed sequentially:
 * question answering
 * summarization
 
-The pretrained models are downloaded and locally cached at: '~/.cache/huggingface/hub' (macOS, Linux). This is the default directory given by the shell environment variable TRANSFORMERS_CACHE. On Windows, the default directory is given by 'C:\Users\%USERNAME%\.cache\huggingface\hub'.  
+The pretrained models are downloaded and locally cached at: ```~/.cache/huggingface/hub``` (macOS, Linux). This is the default directory given by the shell environment variable TRANSFORMERS_CACHE. On Windows, the default directory is given by ```C:\Users\%USERNAME%\.cache\huggingface\hub```.  
 
 ### 7. Start transformers_offline.py
 
