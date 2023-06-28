@@ -1,8 +1,6 @@
 # Console Chatbot Demo (Azure OpenAI Service)
 
-Description: This is a basic chatbot console application using Azure OpenAI client library for .NET (v1.0.0-beta.5) and Azure OpenAI Service deployed Generative AI Model gpt-4.
-
-------------------------------
+*Description:* This is a basic chatbot console application using Azure OpenAI client library for .NET (v1.0.0-beta.5) and Azure OpenAI Service deployed Generative AI Model gpt-4.
 
 ## Prerequisites
 
@@ -25,7 +23,7 @@ For more information about model deployment, see the [resource deployment guide]
 [Quickstart: Get started using ChatGPT and GPT-4 with Azure OpenAI Service - Prerequisites](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp#prerequisites)
 
 
-------------------------------
+## Project setup
 
 ### 4. Get the deployment name
 
