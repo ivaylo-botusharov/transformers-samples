@@ -41,7 +41,7 @@ await foreach (StreamingChatChoice choice in streamingChatCompletions.GetChoices
 }
 ```
 
-, but with added option to have a conversation between a user and a bot. Also added the option to remmber the context from previous questions and their answers.
+, but with added option to have a conversation between a user and a bot. Also added the option to remember the context from previous questions and their answers.
 
 Screenshot:
 

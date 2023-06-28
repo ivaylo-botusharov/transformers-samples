@@ -51,10 +51,25 @@ def perform_question_answering_offline(question: str, context: str) -> Pipeline:
 
 
 def perform_summarization_offline(text: str) -> str:
-    """Takes text as input and returns the summarization result of the offline model."""
+    """Takes text as input and returns the summarization result of the sshleifer-distilbart-cnn-12-6 offline model."""
     # files downloaded from:
     # https://huggingface.co/sshleifer/distilbart-cnn-12-6/tree/a4f8f3ea906ed274767e9906dbaede7531d660ff
     model_folder_path: str = "src/files/sshleifer-distilbart-cnn-12-6-revision-a4f8f3e"
+    tokenizer = AutoTokenizer.from_pretrained(model_folder_path)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_folder_path)
+    summarizer = pipeline(
+        task="summarization",
+        model=model,
+        tokenizer=tokenizer)
+    outputs: Pipeline = summarizer(text, max_length=45, min_length=20, clean_up_tokenization_spaces=True)
+    return outputs[0]['summary_text']
+
+
+def perform_summarization_offine_detailed_facebook_bart_large(text: str) -> Pipeline:
+    """Takes text as input and returns the summarization result of the facebook-bart-large-cnn offline model."""
+    # files downloaded from:
+    # https://huggingface.co/facebook/bart-large-cnn/tree/3d224934c6541b2b9147e023c2f6f6fe49bd27e1
+    model_folder_path: str = "src/files/facebook-bart-large-cnn-revision-3d22493"
     tokenizer = AutoTokenizer.from_pretrained(model_folder_path)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_folder_path)
     summarizer = pipeline(
@@ -88,3 +103,8 @@ print(question_answer_offline)
 
 summarized_text_offline: str = perform_summarization_offline(customer_product_review)
 print(summarized_text_offline)
+
+summarized_text_offline_detailed_facebook_bart_large: Pipeline = perform_summarization_offine_detailed_facebook_bart_large(
+    customer_product_review
+)
+print(summarized_text_offline_detailed_facebook_bart_large)
