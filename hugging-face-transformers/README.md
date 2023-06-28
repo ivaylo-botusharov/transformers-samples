@@ -58,7 +58,7 @@ Option A:
 
 7.1. Download the [files](https://drive.google.com/drive/folders/14pT_IRs4HCvfpjfitGE6dpRHjvIz0bZa?usp=sharing) folder from my Google Drive.  
 
-7.2. Move the 'files' folder into [hugging-face-transformers/src](hugging-face-transformers/src/) folder  
+7.2. Move the 'files' folder into [src](src/) folder  
 
 Option B:  
 
