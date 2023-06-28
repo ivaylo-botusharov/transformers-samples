@@ -46,7 +46,9 @@ Endpoint - click on 'Copy to clipboard' button on the right side of the endpoint
 [Quickstart: Get started using ChatGPT and GPT-4 with Azure OpenAI Service - Retrieve key and endpoint](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp#retrieve-key-and-endpoint)  
 
 
-*Option B:* Open [Azure OpenAI Studio](https://oai.azure.com/portal) - (sidebar) Playground section - Chat. In the 'Configuration' column on the page right-hand side - Deployment tab - Deployment* dropdown - select your GPT-4 Deployment name.  
+*Option B:*  
+
+Open [Azure OpenAI Studio](https://oai.azure.com/portal) - (sidebar) Playground section - Chat. In the 'Configuration' column on the page right-hand side - Deployment tab - Deployment* dropdown - select your GPT-4 Deployment name.  
 
 In 'Chat session' column - click on 'View code'. A 'Sample Code' modal will open - at it's bottom you should see 'Endpoint' and 'Key' fields.  
 
