@@ -4,7 +4,7 @@ Description: This is a basic chatbot console application using Azure OpenAI clie
 
 ------------------------------
 
-Prerequisites:  
+### Prerequisites:  
 
 1. An Azure subscription
 
@@ -12,7 +12,7 @@ Prerequisites:
 
 * Currently, access to this service is granted only by application. You can apply for access to Azure OpenAI by completing the form at https://aka.ms/oai/access. Open an issue on this repo to contact us if you have an issue.
 
-An Azure OpenAI Service resource with the gpt-4¹ model deployed. For more information about model deployment, see the [resource deployment guide](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/create-resource).  
+3. An Azure OpenAI Service resource with the gpt-4¹ model deployed. For more information about model deployment, see the [resource deployment guide](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/create-resource).  
 
 1 - GPT-4 models are currently only available by request. To access these models, existing Azure OpenAI customers can [apply for access by filling out this form](https://aka.ms/oai/get-gpt4)  
 
