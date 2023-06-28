@@ -1,18 +1,20 @@
-## Console Chatbot Demo (Azure OpenAI Service)
+# Console Chatbot Demo (Azure OpenAI Service)
 
 Description: This is a basic chatbot console application using Azure OpenAI client library for .NET (v1.0.0-beta.5) and Azure OpenAI Service deployed Generative AI Model gpt-4.
 
 ------------------------------
 
-### Prerequisites:  
+## Prerequisites:  
 
-1. An Azure subscription
+### 1. An Azure subscription
 
-2. Access granted to Azure OpenAI in the desired Azure subscription.
+### 2. Access granted to Azure OpenAI in the desired Azure subscription.
 
-* Currently, access to this service is granted only by application. You can apply for access to Azure OpenAI by completing the form at https://aka.ms/oai/access. Open an issue on this repo to contact us if you have an issue.
+* Currently, access to this service is granted only by application. You can apply for access to Azure OpenAI by completing the form at https://aka.ms/oai/access.  
 
-3. An Azure OpenAI Service resource with the gpt-4¹ model deployed. For more information about model deployment, see the [resource deployment guide](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/create-resource).  
+After you receive confirmation in the email you provided in the form, navigate to Azure Portal and create the 'Azure OpenAI' resource.
+
+### 3. An Azure OpenAI Service resource with the gpt-4¹ model deployed. For more information about model deployment, see the [resource deployment guide](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/create-resource).  
 
 ¹ - GPT-4 models are currently only available by request. To access these models, existing Azure OpenAI customers can [apply for access by filling out this form](https://aka.ms/oai/get-gpt4)  
 
@@ -23,15 +25,13 @@ Description: This is a basic chatbot console application using Azure OpenAI clie
 
 ------------------------------
 
-4. Get the deployment name
+### 4. Get the deployment name
 
 Log into [Azure OpenAI Studio](https://oai.azure.com/portal) - (sidebar) Management section - Deployments. In the table on the right side - copy the value for the GPT-4 deployment row under the 'Deployment name' column.
 
-5. Get the endpoint and key
+### 5. Get the endpoint and key
 
-4.2. Get the deployment key  
-
-Option A:  
+*Option A:*  
 
 [Open Microsoft Azure Portal](https://portal.azure.com/#home), then click on the Azure OpenAI resource you have created - (sidebar) 'Resource Management' section - 'Keys and Endpoint'.  
 
@@ -39,21 +39,21 @@ KEY 1 - click on 'Copy to clipboard' button on the right side of the key value. 
 
 Endpoint - click on 'Copy to clipboard' button on the right side of the endpoint value. Paste the value in a text file temporarily.  
 
-*Reference:*
+*Reference:*  
 
 [Quickstart: Get started using ChatGPT and GPT-4 with Azure OpenAI Service - Retrieve key and endpoint](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp#retrieve-key-and-endpoint)  
 
 
-Option B: Open [Azure OpenAI Studio](https://oai.azure.com/portal) - (sidebar) Playground section - Chat. In the 'Configuration' column on the page right-hand side - Deployment tab - Deployment* dropdown - select your GPT-4 Deployment name.  
+*Option B:* Open [Azure OpenAI Studio](https://oai.azure.com/portal) - (sidebar) Playground section - Chat. In the 'Configuration' column on the page right-hand side - Deployment tab - Deployment* dropdown - select your GPT-4 Deployment name.  
 
 In 'Chat session' column - click on 'View code'. A 'Sample Code' modal will open - at it's bottom you should see 'Endpoint' and 'Key' fields.  
 
 Endponint - click on 'Copy to clipboard' button on the right side of the value. Paste the value in a text file temporarily.  
 Key - click on 'Copy to clipboard' button on the right side of the value. Paste the value in a text file temporarily.  
 
-5. Replace endpoint, key and deploymentOrModelName value placeholders in the app  
+### 6. Replace endpoint, key and deploymentOrModelName value placeholders in the app
 
-Open ConsoleChat/Program.cs and replace the variable values:  
+Open ```ConsoleChat/Program.cs``` and replace the variable values:  
 
 ```CSharp
 string endpoint = "your-azure-openai-service-endpoint-url-here";
@@ -69,15 +69,15 @@ For a safer solution, see:
 
 [Quickstart: Get started using ChatGPT and GPT-4 with Azure OpenAI Service - Environment variables](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp#environment-variables)  
 
-6. Restore NuGet packages  
+### 7. Restore NuGet packages
 
 In Terminal / cmd run: ```dotnet restore```  
 
-7. Build the app  
+### 8. Build the app
 
 Open Terminal - navigate to the Project - run: ```dotnet build```  
 
-8. Run the Project  
+### 9. Run the Project
 
 Open Terminal - navigate to the Project - run: ```dotnet run```  
 
