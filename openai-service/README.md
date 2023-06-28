@@ -4,7 +4,7 @@ Description: This is a basic chatbot console application using Azure OpenAI clie
 
 ------------------------------
 
-## Prerequisites:  
+## Prerequisites
 
 ### 1. An Azure subscription
 
