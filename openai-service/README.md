@@ -23,6 +23,55 @@ Description: This is a basic chatbot console application using Azure OpenAI clie
 
 ------------------------------
 
+4. Get the deployment name and key  
+
+4.1. Get the deployment name  
+
+Log into [Azure OpenAI Studio](https://oai.azure.com/portal) - (sidebar) Management section - Deployments. In the table on the right side - copy the value for the GPT-4 deployment row under the 'Deployment name' column.
+
+4.2. Get the deployment key  
+
+Option A: [Open Microsoft Azure Portal](https://portal.azure.com/#home), then click on the Azure OpenAI resource you have created - (sidebar) 'Resource Management' section - 'Keys and Endpoint' - Key 1 - click on 'Copy to clipboard' button on the right side of the key value.  
+
+Option B: Open [Azure OpenAI Studio](https://oai.azure.com/portal) - (sidebar) Playground section - Chat. In the 'Configuration' column on the page right-hand side - Deployment tab - Deployment * dropdown - select your GPT-4 Deployment name.  
+
+In 'Chat session' column - click on 'View code'. A 'Sample Code' modal will open - at it's bottom you should see 'Key' field with 'Copy to clipboard' button on it's right side. Click on the 'Copy to clipboard button'.  
+
+*Reference:*
+
+[Quickstart: Get started using ChatGPT and GPT-4 with Azure OpenAI Service - Retrieve key and endpoint](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp#retrieve-key-and-endpoint)  
+
+5. Replace placeholders for deployment name and key in the app  
+
+Open ConsoleChat/Program.cs and replace the variable values:  
+
+```CSharp
+string key = "your-azure-openai-service-key";
+string deploymentOrModelName = "development-gpt-4";
+```
+
+*Note:* This is just a temporary solution (DO NOT push these changes in public GitHub repository).  
+
+For a safer solution, see:  
+
+[Quickstart: Get started using ChatGPT and GPT-4 with Azure OpenAI Service - Environment variables](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp#environment-variables)  
+
+6. Restore NuGet packages  
+
+In Terminal / cmd run: ```dotnet restore```  
+
+7. Build the app  
+
+Open Terminal - navigate to the Project - run: ```dotnet build```  
+
+8. Run the Project  
+
+Open Terminal - navigate to the Project - run: ```dotnet run```  
+
+------------------------------
+
+### Additional details
+
 This demo is mainly based on:  
 
 [Quickstart: Get started using ChatGPT (preview) and GPT-4 (preview) with Azure OpenAI Service - Async with streaming](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?pivots=programming-language-csharp&tabs=command-line#async-with-streaming)  
