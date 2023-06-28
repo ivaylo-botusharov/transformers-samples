@@ -45,7 +45,7 @@ await foreach (StreamingChatChoice choice in streamingChatCompletions.GetChoices
 
 Screenshot:
 
-![Console Chatbot](./Images/Capture-01.PNG)
+![Console Chatbot](Images/Capture-01.png)
 
 
 ----------------
