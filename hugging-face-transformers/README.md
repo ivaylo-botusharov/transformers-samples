@@ -72,11 +72,11 @@ Open Terminal and execute the command: ```make run-offline```
 ## Models:
 
 
-task: summarization
-model: facebook/bart-large-cnn
-revision: 3d22493
-commit URL: https://huggingface.co/facebook/bart-large-cnn/tree/3d224934c6541b2b9147e023c2f6f6fe49bd27e1
-my Google Drive URL:
+task: summarization  
+model: facebook/bart-large-cnn  
+revision: 3d22493  
+commit URL: https://huggingface.co/facebook/bart-large-cnn/tree/3d224934c6541b2b9147e023c2f6f6fe49bd27e1  
+my Google Drive URL: [facebook-bart-large-cnn-revision-3d22493](https://drive.google.com/drive/folders/1X-8OI3_7jCpuZsHjS7fMwvT12EsiU9Kt?usp=drive_link)  
 
 Required files:  
 
