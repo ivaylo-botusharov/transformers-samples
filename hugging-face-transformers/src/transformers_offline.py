@@ -18,7 +18,10 @@ def perform_sentiment_analysis_offline(text: str) -> Pipeline:
     distilbert_folder_path: str = "src/files/distilbert-base-uncased-finetuned-sst-2-english-revision-3d65bad"
     tokenizer = AutoTokenizer.from_pretrained(distilbert_folder_path)
     model = AutoModelForSequenceClassification.from_pretrained(distilbert_folder_path)
-    sentiment_classifier = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
+    sentiment_classifier = pipeline(
+        task="sentiment-analysis",
+        model=model,
+        tokenizer=tokenizer)
     result = sentiment_classifier(text)
     return result
 
@@ -30,7 +33,11 @@ def perform_named_entity_recognition_offline(text: str) -> Pipeline:
     bert_folder_path: str = "src/files/dbmdz-bert-large-cased-finetuned-conll03-english-revision-f2482bf"
     tokenizer = AutoTokenizer.from_pretrained(bert_folder_path, return_offsets_mapping=True)
     model = AutoModelForTokenClassification.from_pretrained(bert_folder_path)
-    ner_tagger = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
+    ner_tagger = pipeline(
+        task="ner",
+        model=model,
+        tokenizer=tokenizer,
+        aggregation_strategy="simple")
     result = ner_tagger(text)
     return result
 

@@ -20,16 +20,21 @@ B. If you are on a Mac you can run: ```sudo sh poetry-install.sh``` from the scr
 
 Then you can verify if Poetry is successfully installed by reopening the Terminal and typing: poetry --version  
 
+### 3. Download and install Visual Studio Code
+
+### 4. Install Python VS Code extension (by Microsoft)
+
+
 --------------------------
 
 ### Project Setup
 
-### 3. Create virtual environment (using Poetry)
+### 5. Create virtual environment (using Poetry)
 
 macOS: Open terminal in Project folder and run: ```poetry env use /usr/local/bin/python3.10```  
 Windows: Open command line (CMD) in Project folder and run: ```poetry env use "C:\Python3.10\python.exe"```
 
-### 4. Select Python interpreter for the Project (Workspace)
+### 6. Select Python interpreter for the Project (Workspace)
 
 Reopen project in VS Code
 
@@ -37,14 +42,14 @@ Go to: View - Command pallete (Command + Shift + P) - Python: Select interpreter
 
 If you don't see the path to Python 3.10 (within the poetry virtual environment folder), then click on the Refresh button (at the top right hand side of the Search bar).  
 
-### 5. Install Python packages  
+### 7. Install Python packages  
 
 In terminal type:
 
 ```poetry lock```  
 ```poetry install```   
 
-### 6. Start main.py
+### 8. Start main.py
 
 In Terminal navigate to the Project folder (where also the MakeFile is located) and start the project by typing: ```make run```.    
 
@@ -57,15 +62,15 @@ Several Hugging Face Transformers pipelines will be executed sequentially:
 
 The pretrained models are downloaded and locally cached at: ```~/.cache/huggingface/hub``` (macOS, Linux). This is the default directory given by the shell environment variable TRANSFORMERS_CACHE. On Windows, the default directory is given by ```C:\Users\%USERNAME%\.cache\huggingface\hub```.  
 
-### 7. Start transformers_offline.py
+### 9. Start transformers_offline.py
 
 If you want to explicitly specify the path to the transformer model files and don't want the Transformers library to download and cache them automatically for you, then you can:
 
 Option A:  
 
-7.1. Download the [files](https://drive.google.com/drive/folders/14pT_IRs4HCvfpjfitGE6dpRHjvIz0bZa?usp=sharing) folder from my Google Drive.  
+9.1. Download the [files](https://drive.google.com/drive/folders/14pT_IRs4HCvfpjfitGE6dpRHjvIz0bZa?usp=sharing) folder from my Google Drive.  
 
-7.2. Move the 'files' folder into [src](src/) folder  
+9.2. Move the 'files' folder into [src](src/) folder  
 
 Option B:  
 
