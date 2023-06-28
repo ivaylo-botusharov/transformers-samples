@@ -22,7 +22,7 @@ Then you can verify if Poetry is successfully installed by reopening the Termina
 
 ### 3. Download and install Visual Studio Code
 
-### 4. Install Python VS Code extension (by Microsoft)
+### 4. Install Visual Studio Code Python extension (by Microsoft)
 
 
 --------------------------
@@ -74,7 +74,7 @@ Option A:
 
 Option B:  
 
-You can download each model corresponding files by yourself from Hugging Face Hub by looking below at the model details (revision used, commit URL, required files). Then put the files in Local folder with specific name (see: 'Local folder')
+You can download each model corresponding files by yourself from Hugging Face Hub by looking below at the model details (revision used, commit URL, required files). Then put the files in Local folder with specific name (see: 'Local folder' below)
 
 Open Terminal and execute the command: ```make run-offline```
 
@@ -84,13 +84,13 @@ Open Terminal and execute the command: ```make run-offline```
 ## Models:
 
 
-task: summarization  
-model: facebook/bart-large-cnn  
-revision: 3d22493  
-commit URL: https://huggingface.co/facebook/bart-large-cnn/tree/3d224934c6541b2b9147e023c2f6f6fe49bd27e1  
-my Google Drive URL: [facebook-bart-large-cnn-revision-3d22493](https://drive.google.com/drive/folders/1X-8OI3_7jCpuZsHjS7fMwvT12EsiU9Kt?usp=drive_link)  
+*task:* summarization  
+*model:* facebook/bart-large-cnn  
+*revision:* 3d22493  
+*commit URL:* https://huggingface.co/facebook/bart-large-cnn/tree/3d224934c6541b2b9147e023c2f6f6fe49bd27e1  
+*my Google Drive URL:* [facebook-bart-large-cnn-revision-3d22493](https://drive.google.com/drive/folders/1X-8OI3_7jCpuZsHjS7fMwvT12EsiU9Kt?usp=drive_link)  
 
-Required files:  
+*Required files:*  
 
 config.json  
 generation_config.json  
@@ -99,7 +99,7 @@ pytorch_model.bin
 tokenizer.json  
 vocab.json  
 
-Local folder: hugging-face-transformers/src/files/facebook-bart-large-cnn-revision-3d22493  
+*Local folder:* hugging-face-transformers/src/files/facebook-bart-large-cnn-revision-3d22493  
 
 
 *Note:* Keep in mind that the 'files' folder is excluded from tracking and is not in the GitHub repository due to large file sizes. 

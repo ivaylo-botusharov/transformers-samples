@@ -2,11 +2,11 @@
 using Azure.AI.OpenAI;
 using System.Text;
 
-string endpoint = "your-azure-openai-service-endpoint-url";
-string key = "your-azure-openai-service-key";
+string endpoint = "your-azure-openai-service-endpoint-url-here";
+string key = "your-azure-openai-service-key-here";
 
 // Enter the deployment name you chose when you deployed the model.
-string deploymentOrModelName = "development-gpt-4";
+string deploymentOrModelName = "your-deployment-name-here";
 
 //OpenAIClientOptions.ServiceVersion version = OpenAIClientOptions.ServiceVersion.V2023_03_15_Preview;
 //var options = new OpenAIClientOptions(version);

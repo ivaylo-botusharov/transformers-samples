@@ -23,31 +23,44 @@ Description: This is a basic chatbot console application using Azure OpenAI clie
 
 ------------------------------
 
-4. Get the deployment name and key  
-
-4.1. Get the deployment name  
+4. Get the deployment name
 
 Log into [Azure OpenAI Studio](https://oai.azure.com/portal) - (sidebar) Management section - Deployments. In the table on the right side - copy the value for the GPT-4 deployment row under the 'Deployment name' column.
 
+5. Get the endpoint and key
+
 4.2. Get the deployment key  
 
-Option A: [Open Microsoft Azure Portal](https://portal.azure.com/#home), then click on the Azure OpenAI resource you have created - (sidebar) 'Resource Management' section - 'Keys and Endpoint' - Key 1 - click on 'Copy to clipboard' button on the right side of the key value.  
+Option A:  
 
-Option B: Open [Azure OpenAI Studio](https://oai.azure.com/portal) - (sidebar) Playground section - Chat. In the 'Configuration' column on the page right-hand side - Deployment tab - Deployment * dropdown - select your GPT-4 Deployment name.  
+[Open Microsoft Azure Portal](https://portal.azure.com/#home), then click on the Azure OpenAI resource you have created - (sidebar) 'Resource Management' section - 'Keys and Endpoint'.  
 
-In 'Chat session' column - click on 'View code'. A 'Sample Code' modal will open - at it's bottom you should see 'Key' field with 'Copy to clipboard' button on it's right side. Click on the 'Copy to clipboard button'.  
+KEY 1 - click on 'Copy to clipboard' button on the right side of the key value. Paste the value in a text file temporarily.  
+
+Endpoint - click on 'Copy to clipboard' button on the right side of the endpoint value. Paste the value in a text file temporarily.  
 
 *Reference:*
 
 [Quickstart: Get started using ChatGPT and GPT-4 with Azure OpenAI Service - Retrieve key and endpoint](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp#retrieve-key-and-endpoint)  
 
-5. Replace placeholders for deployment name and key in the app  
+
+Option B: Open [Azure OpenAI Studio](https://oai.azure.com/portal) - (sidebar) Playground section - Chat. In the 'Configuration' column on the page right-hand side - Deployment tab - Deployment* dropdown - select your GPT-4 Deployment name.  
+
+In 'Chat session' column - click on 'View code'. A 'Sample Code' modal will open - at it's bottom you should see 'Endpoint' and 'Key' fields.  
+
+Endponint - click on 'Copy to clipboard' button on the right side of the value. Paste the value in a text file temporarily.  
+Key - click on 'Copy to clipboard' button on the right side of the value. Paste the value in a text file temporarily.  
+
+5. Replace endpoint, key and deploymentOrModelName value placeholders in the app  
 
 Open ConsoleChat/Program.cs and replace the variable values:  
 
 ```CSharp
-string key = "your-azure-openai-service-key";
-string deploymentOrModelName = "development-gpt-4";
+string endpoint = "your-azure-openai-service-endpoint-url-here";
+string key = "your-azure-openai-service-key-here";
+
+// Enter the deployment name you chose when you deployed the model.
+string deploymentOrModelName = "your-deployment-name-here";
 ```
 
 *Note:* This is just a temporary solution (DO NOT push these changes in public GitHub repository).  
