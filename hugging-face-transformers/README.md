@@ -6,13 +6,17 @@ Description: This is a Python Demo Project using [Hugging Face Transformers](htt
 
 ### 1. Install Python 3.10.11
 
-You can install Python by opening Terminal and navigating to the Project scripts folder, then typing: ```sudo sh python-install.sh```  
+You can download the Python official installer from: [Python 3.10.11 (Release Date: April 5, 2023)](https://www.python.org/downloads/release/python-31011/) and run it on your computer  
 
-Or you can download the Python official installer from: [Python 3.10.11 (Release Date: April 5, 2023)](https://www.python.org/downloads/release/python-31011/) and run it on your computer  
+If you are on a Mac, you can install Python by opening Terminal and navigating to the Project scripts folder, then typing: ```sudo sh python-install.sh```  
 
 ### 2. Install Poetry
 
-You can install Poetry by running: ```sudo sh poetry-install.sh``` from the scripts folder within the Project.  
+You can install Poetry by:
+
+A. Following the instructions on their documentation website (see: [Introduction - Installation](https://python-poetry.org/docs/#installation))  
+
+B. If you are on a Mac you can run: ```sudo sh poetry-install.sh``` from the scripts folder within the Project.  
 
 Then you can verify if Poetry is successfully installed by reopening the Terminal and typing: poetry --version  
 
@@ -22,13 +26,16 @@ Then you can verify if Poetry is successfully installed by reopening the Termina
 
 ### 3. Create virtual environment (using Poetry)
 
-Open terminal in Project folder and run: ```poetry env use /usr/local/bin/python3.10```
+macOS: Open terminal in Project folder and run: ```poetry env use /usr/local/bin/python3.10```  
+Windows: Open command line (CMD) in Project folder and run: ```poetry env use "C:\Python3.10\python.exe"```
 
 ### 4. Select Python interpreter for the Project (Workspace)
 
 Reopen project in VS Code
 
-Go to: View - Command pallete (Command + Shift + P) - Python: Select interpreter - Select at workspace level - make sure the Python 3.10.11 (Poetry) interpreter is selected  
+Go to: View - Command pallete (Command + Shift + P) - Python: Select interpreter - Select at workspace level - make sure the Python 3.10.11 (Poetry) interpreter is selected.  
+
+If you don't see the path to Python 3.10 (within the poetry virtual environment folder), then click on the Refresh button (at the top right hand side of the Search bar).  
 
 ### 5. Install Python packages  
 
