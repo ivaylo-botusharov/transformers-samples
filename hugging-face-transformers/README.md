@@ -39,7 +39,7 @@ In terminal type:
 
 ### 6. Start main.py
 
-In Terminal navigate to the Project folder (where also the MakeFile is located) and start the project by typing: ```make run```  
+In Terminal navigate to the Project folder (where also the MakeFile is located) and start the project by typing: ```make run```.    
 
 Several Hugging Face Transformers pipelines will be executed sequentially:
 
@@ -47,6 +47,8 @@ Several Hugging Face Transformers pipelines will be executed sequentially:
 * named-entity recognition (NER)
 * question answering
 * summarization
+
+The pretrained models are downloaded and locally cached at: '~/.cache/huggingface/hub'. This is the default directory given by the shell environment variable TRANSFORMERS_CACHE. On Windows, the default directory is given by 'C:\Users\%USERNAME%\.cache\huggingface\hub'.  
 
 ### 7. Start transformers_offline.py
 

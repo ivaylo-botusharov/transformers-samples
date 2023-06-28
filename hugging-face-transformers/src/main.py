@@ -63,6 +63,17 @@ def perform_summarization_online_detailed(text: str) -> Pipeline:
     return outputs[0]['summary_text']
 
 
+def perform_summarization_online_detailed_facebook_bart_large(text: str) -> Pipeline:
+    """Takes text as input and returns the summarization result of the online model. More pipeline parameters are explicitly set."""
+    summarizer = pipeline(
+        task="summarization",
+        model="facebook/bart-large-cnn",
+        revision="3d22493",
+        framework="pt")
+    outputs: Pipeline = summarizer(text, max_length=45, min_length=20, clean_up_tokenization_spaces=True)
+    return outputs[0]['summary_text']
+
+
 sentiment_analysis_input: str = "You are so smart and beautiful"
 
 sentiment_analysis_result_online: Pipeline = perform_sentiment_analysis_online(sentiment_analysis_input)
@@ -93,3 +104,8 @@ print(summarized_text_online)
 
 summarized_text_online_detailed: str = perform_summarization_online_detailed(customer_product_review)
 print(summarized_text_online_detailed)
+
+summarized_text_online_detailed_facebook_bart_large: str = perform_summarization_online_detailed_facebook_bart_large(
+    customer_product_review
+)
+print(summarized_text_online_detailed_facebook_bart_large)
