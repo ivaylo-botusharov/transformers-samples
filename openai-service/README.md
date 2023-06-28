@@ -2,6 +2,27 @@
 
 Description: This is a basic chatbot console application using Azure OpenAI client library for .NET (v1.0.0-beta.5) and Azure OpenAI Service deployed Generative AI Model gpt-4. This demo is mainly based on: 
 
+------------------------------
+
+Prerequisites:  
+
+1. An Azure subscription
+
+2. Access granted to Azure OpenAI in the desired Azure subscription.
+
+* Currently, access to this service is granted only by application. You can apply for access to Azure OpenAI by completing the form at https://aka.ms/oai/access. Open an issue on this repo to contact us if you have an issue.
+
+An Azure OpenAI Service resource with the gpt-4¹ model deployed. For more information about model deployment, see the [resource deployment guide](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/create-resource).  
+
+1 - GPT-4 models are currently only available by request. To access these models, existing Azure OpenAI customers can [apply for access by filling out this form](https://aka.ms/oai/get-gpt4)  
+
+*Reference:*
+
+[Quickstart: Get started using ChatGPT and GPT-4 with Azure OpenAI Service - Prerequisites](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp#prerequisites)
+
+
+------------------------------
+
 [Quickstart: Get started using ChatGPT (preview) and GPT-4 (preview) with Azure OpenAI Service - Async with streaming](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?pivots=programming-language-csharp&tabs=command-line#async-with-streaming)
 
 ```CSharp
